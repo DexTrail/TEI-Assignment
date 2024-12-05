@@ -57,3 +57,10 @@ force.json
 .forceCode/
 .vscode/
 .forceIgnore
+
+# Added by Illuminated Cloud
+/out/
+target/
+/.illuminatedCloud/
+**/tsconfig*.json
+**/*.tsbuildinfo
