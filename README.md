@@ -1,5 +1,3 @@
-# TODO
-
 # Top Employers Institute assignment
 
 ## Instructions
@@ -38,4 +36,35 @@
 
 ## How to deploy
 
-# TODO
+Make sure to start from a brand-new environment to avoid conflicts with previous work you may have done.
+
+1. Clone this repository:
+
+    ```
+    git clone https://github.com/DexTrail/TEI-Assignment
+    cd tei-assignment
+    ```
+
+1. Authorize your Trailhead Playground or Developer org and provide it with an alias (**mydevorg** in the command below):
+
+    ```
+    sf org login web -s -a mydevorg
+    ```
+
+1. Run this command in a terminal to deploy the app.
+
+    ```
+    sf project deploy start -o mydevorg -d force-app
+    ```
+
+1. Assign the `Account_Overview_Access` permission set to the default user.
+
+    ```
+    sf org assign permset -o mydevorg -n Account_Overview_Access
+    ```
+
+1. If your org isn't already open, open it now:
+
+    ```
+    sf org open -o mydevorg
+    ```
