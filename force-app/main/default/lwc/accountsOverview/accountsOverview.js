@@ -19,6 +19,8 @@ export default class AccountsOverview extends LightningElement {
         console.log('accInfo', data);
         if (data) this.accountLabels = {
             annualRevenue: data.fields.AnnualRevenue.label,
+            businessUsers: data.fields.Business_Users__c.label,
+            decisionMakers: data.fields.Decision_Makers__c.label,
             name: data.fields.Name.label,
             tickerSymbol: data.fields.TickerSymbol.label,
         }
