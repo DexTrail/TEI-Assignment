@@ -45,6 +45,10 @@ export default class AccountPanel extends LightningElement {
         return `Opportunities ${this.account?.Opportunities?.length || 0}`;
     }
 
+    get tickerSymbol() {
+        return this.account.TickerSymbol || '-';
+    }
+
     get tickerSymbolLabel() {
         return this.accountLabels?.tickerSymbol || 'Ticker Symbol';
     }
