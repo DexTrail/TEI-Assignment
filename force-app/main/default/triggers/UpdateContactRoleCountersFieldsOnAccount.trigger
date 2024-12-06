@@ -30,18 +30,19 @@ trigger UpdateContactRoleCountersFieldsOnAccount on Contact (after insert, after
     for (Account account : accounts) {
         Integer BusinessUsersCounter = 0;
         Integer DecisionMakersCounter = 0;
-        for (AccountContactRole role : accountIdToRoles.get(account.Id)) {
-            if (role.Role == 'Business User') {
-                BusinessUsersCounter++;
+        if (!accountIdToRoles.isEmpty()) {
+            for (AccountContactRole role : accountIdToRoles.get(account.Id)) {
+                if (role.Role == 'Business User') {
+                    BusinessUsersCounter++;
+                } else if (role.Role == 'Decision Maker') {
+                    DecisionMakersCounter++;
+                }
             }
-            else if (role.Role == 'Decision Maker') {
-                DecisionMakersCounter++;
-            }
-            if (account.Business_Users__c != BusinessUsersCounter || account.Decision_Makers__c != DecisionMakersCounter) {
-                account.Business_Users__c = BusinessUsersCounter;
-                account.Decision_Makers__c = DecisionMakersCounter;
-                accountsToUpdate.add(account);
-            }
+        }
+        if (account.Business_Users__c != BusinessUsersCounter || account.Decision_Makers__c != DecisionMakersCounter) {
+            account.Business_Users__c = BusinessUsersCounter;
+            account.Decision_Makers__c = DecisionMakersCounter;
+            accountsToUpdate.add(account);
         }
     }
 
