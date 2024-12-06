@@ -19,8 +19,10 @@ export default class AccountPanel extends LightningElement {
 
     formattedLabels = {
         annualRevenue: this.accountLabels?.annualRevenue || 'Annual Revenue',
+        businessUsers: this.accountLabels?.businessUsers || 'Business Users',
         contactRelations: 'Contact Relations',
         contacts: 'Contacts',
+        decisionMakers: this.accountLabels?.decisionMakers || 'Decision Makers',
         opportunities: 'Opportunities',
         tickerSymbol: this.accountLabels?.tickerSymbol || 'Ticker Symbol',
     };
