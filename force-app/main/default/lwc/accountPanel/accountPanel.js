@@ -30,11 +30,11 @@ export default class AccountPanel extends LightningElement {
     }
 
     get contactRelationsTabTitle() {
-        return `Contact Relations ${this.account?.ContactRelations?.length || 0}`;
+        return `Contact Relations (${this.account?.ContactRelations?.length || 0})`;
     }
 
     get contactsTabTitle() {
-        return `Contacts ${this.account?.Contacts?.length || 0}`;
+        return `Contacts (${this.account?.Contacts?.length || 0})`;
     }
 
     get decisionMakersLabel() {
@@ -42,7 +42,7 @@ export default class AccountPanel extends LightningElement {
     }
 
     get opportunitiesTabTitle() {
-        return `Opportunities ${this.account?.Opportunities?.length || 0}`;
+        return `Opportunities (${this.account?.Opportunities?.length || 0})`;
     }
 
     get tickerSymbol() {
