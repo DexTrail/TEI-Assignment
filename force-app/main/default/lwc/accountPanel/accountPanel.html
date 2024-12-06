@@ -1,0 +1,38 @@
+<template>
+    <lightning-card>
+        <div slot="title">
+            <a href={accountUrl} class="slds-tile wrapped-content">{account.Name}</a>
+        </div>
+        <div class="slds-p-horizontal_small">
+            <p>{formattedLabels.tickerSymbol}: {account.TickerSymbol}</p>
+            <p>{formattedLabels.annualRevenue}: <lightning-formatted-number
+                    value={account.AnnualRevenue}
+                    format-style="currency">
+                </lightning-formatted-number>
+            </p>
+        </div>
+        <div slot="footer">
+            <lightning-tabset>
+                <lightning-tab label={formattedLabels.contactRelations}>
+                    <!-- No Contact Relation field -->
+                </lightning-tab>
+                <lightning-tab label={formattedLabels.contacts}>
+                    <lightning-datatable
+                            key-field="id"
+                            columns={contactsColumns}
+                            data={account.Contacts}
+                            hide-checkbox-column>
+                    </lightning-datatable>
+                </lightning-tab>
+                <lightning-tab label={formattedLabels.opportunities}>
+                    <lightning-datatable
+                            key-field="id"
+                            columns={opportunitiesColumns}
+                            data={account.Opportunities}
+                            hide-checkbox-column>
+                    </lightning-datatable>
+                </lightning-tab>
+            </lightning-tabset>
+        </div>
+    </lightning-card>
+</template>
