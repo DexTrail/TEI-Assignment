@@ -4,14 +4,14 @@
             <a href={accountUrl} class="slds-tile wrapped-content">{account.Name}</a>
         </div>
         <div class="slds-p-horizontal_small">
-            <p>{formattedLabels.tickerSymbol}: {account.TickerSymbol}</p>
-            <p>{formattedLabels.annualRevenue}: <lightning-formatted-number
+            <p>{tickerSymbolLabel}: {account.TickerSymbol}</p>
+            <p>{annualRevenueLabel}: <lightning-formatted-number
                     value={account.AnnualRevenue}
                     format-style="currency">
                 </lightning-formatted-number>
             </p>
-            <p>{formattedLabels.businessUsers}: {account.Business_Users__c}</p>
-            <p>{formattedLabels.decisionMakers}: {account.Decision_Makers__c}</p>
+            <p>{businessUsersLabel}: {account.Business_Users__c}</p>
+            <p>{decisionMakersLabel}: {account.Decision_Makers__c}</p>
         </div>
         <div slot="footer">
             <lightning-tabset>
