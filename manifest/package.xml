@@ -1,0 +1,34 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<Package xmlns="http://soap.sforce.com/2006/04/metadata">
+    <types>
+        <members>AccountOverviewController</members>
+        <name>ApexClass</name>
+    </types>
+    <types>
+        <members>UpdateContactFieldsOnAccount</members>
+        <members>UpdateContactRoleCountersFieldsOnAccount</members>
+        <name>ApexTrigger</name>
+    </types>
+    <types>
+        <members>Account</members>
+        <name>CustomObject</name>
+    </types>
+    <types>
+        <members>Accounts_Overview</members>
+        <name>CustomTab</name>
+    </types>
+    <types>
+        <members>Accounts_Overview</members>
+        <name>FlexiPage</name>
+    </types>
+    <types>
+        <members>accountPanel</members>
+        <members>accountsOverview</members>
+        <name>LightningComponentBundle</name>
+    </types>
+    <types>
+        <members>Account_Overview_Access</members>
+        <name>PermissionSet</name>
+    </types>
+    <version>62.0</version>
+</Package>
