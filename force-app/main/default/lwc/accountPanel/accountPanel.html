@@ -15,10 +15,10 @@
         </div>
         <div slot="footer">
             <lightning-tabset>
-                <lightning-tab label={formattedLabels.contactRelations}>
+                <lightning-tab label={contactRelationsTabTitle}>
                     <!-- No Contact Relation field -->
                 </lightning-tab>
-                <lightning-tab label={formattedLabels.contacts}>
+                <lightning-tab label={contactsTabTitle}>
                     <lightning-datatable
                             key-field="id"
                             columns={contactsColumns}
@@ -26,7 +26,7 @@
                             hide-checkbox-column>
                     </lightning-datatable>
                 </lightning-tab>
-                <lightning-tab label={formattedLabels.opportunities}>
+                <lightning-tab label={opportunitiesTabTitle}>
                     <lightning-datatable
                             key-field="id"
                             columns={opportunitiesColumns}

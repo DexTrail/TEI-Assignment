@@ -20,14 +20,23 @@ export default class AccountPanel extends LightningElement {
     formattedLabels = {
         annualRevenue: this.accountLabels?.annualRevenue || 'Annual Revenue',
         businessUsers: this.accountLabels?.businessUsers || 'Business Users',
-        contactRelations: 'Contact Relations',
-        contacts: 'Contacts',
         decisionMakers: this.accountLabels?.decisionMakers || 'Decision Makers',
-        opportunities: 'Opportunities',
         tickerSymbol: this.accountLabels?.tickerSymbol || 'Ticker Symbol',
     };
 
     get accountUrl() {
         return '/' + this.account.Id;
+    }
+
+    get contactRelationsTabTitle() {
+        return `Contact Relations ${this.account?.ContactRelations?.length || 0}`;
+    }
+
+    get contactsTabTitle() {
+        return `Contacts ${this.account?.Contacts?.length || 0}`;
+    }
+
+    get opportunitiesTabTitle() {
+        return `Opportunities ${this.account?.Opportunities?.length || 0}`;
     }
 }
